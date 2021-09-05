@@ -1,0 +1,13 @@
+Coding Assessment (Python)
+Thank you for considering the New York Public Library! When we interview candidates for
+engineering positions, we want to give them an assignment that aligns with the work we are
+doing here.
+What is involved?
+Write a web API with one endpoint that takes an argument in its URL string, does something
+interesting to the argument, and returns the result in a JSON document. Use the Python web
+framework of your choice. Document the endpoint and write a unit test to verify its functionality.
+How long do I have?
+Please don't spend more than two hours on this project. Our goal is to get a picture of the way
+you approach problems; it shouldn't be necessary to write more than 200 lines of code.
+How do I submit my assignment?
+Please provide us with a ZIP file containing source code or a link to a Git repository.
