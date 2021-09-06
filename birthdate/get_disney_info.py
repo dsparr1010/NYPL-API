@@ -1,10 +1,7 @@
 import pandas as pd
 import os
-import json
 import requests
 from datetime import datetime
-# dev
-from pprint import pprint
 
 
 KEY = os.getenv('IMDB_KEY')

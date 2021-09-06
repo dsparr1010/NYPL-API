@@ -1,6 +1,7 @@
 from django.test import TestCase
 from ..get_disney_info import open_csv, get_movie_id, get_movie_info, get_nearest_movie_by_date
 from ..views import convert_to_int
+from pandas import DataFrame
 
 
 class BirthdateIntakeFunctionalityTest(TestCase):
@@ -22,3 +23,11 @@ class BirthdateIntakeFunctionalityTest(TestCase):
         self.data['birthday'] = 'NOT AN INT'
         with self.assertRaises(ValueError):
             convert_to_int(**self.data)
+
+    def test_15_open_csv_pass(self):
+        df = open_csv(path='disney-characters.csv')
+        self.assertIsInstance(df, DataFrame)
+
+    def test_20_open_csv_fail(path):
+        with self.assertRaises(FileNotFoundError):
+            open_csv('NONEXISTENT_PATH.csv')

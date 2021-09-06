@@ -1,20 +1,11 @@
-from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse, JsonResponse
-import requests
-import json
-
-from .get_disney_info import open_csv, get_movie_id, get_movie_info, get_nearest_movie_by_date
-
-# temp
-from rest_framework.response import Response
+from django.http import JsonResponse
 from rest_framework.decorators import api_view
-from requests.exceptions import HTTPError
-
-# dev
-from pprint import pprint
+import requests
+from .get_disney_info import open_csv, get_movie_id, get_movie_info, get_nearest_movie_by_date
 
 
 def convert_to_int(**kwargs) -> dict:
+    ''' Converts a dictionary's values to integers and returns a new dictionary '''
     try:
         return {key: int(value) for (key, value) in kwargs.items()}
     except ValueError:

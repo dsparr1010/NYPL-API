@@ -25,9 +25,17 @@ I use the following technologies:
 * create an .env file in the 'ddisney_movie_finder' main project folder (along side the settings.py)
     - *the application will not work without the environment variables!*
     - credentials will be sent via email
-* start the application:
+* to start the application:
     - ```python3 manage.py runserver```
     - Note: you will see a warning about unapplied migrations. These can be safely ignored since this application does not use a database and does not utilize Django's ORM.
+* to run tests:
+    - ```python3 manage.py test```
+
+## Endpoint
+After starting the server, travel to /api/birthdate/?birthyear=[INSERT YOUR BIRTH YEAR]>&birthmonth=[INSERT YOUR BIRTH MONTH]&birthday[INSERT YOUR BIRTHDAY]
+* Example:
+http://127.0.0.1:8000/api/birthdate/?birthyear=1991&birthmonth=10&birthday=10
+* Returns: JSON response with nearest movie's runtime, title, and plot on success.
 
 ## Authors
 Debra Sparr
