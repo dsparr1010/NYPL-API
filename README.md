@@ -20,6 +20,7 @@ I use the following technologies:
     - pipenv shell
 * install dependencies
     - pipenv install
+    - alternatively, install from requirements.txt
 
 ### Executing program
 * create an .env file in the 'ddisney_movie_finder' main project folder (along side the settings.py)
